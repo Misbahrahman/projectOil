@@ -71,7 +71,7 @@ const HeroSection = () => (
             <h3 className="text-lg font-semibold text-gray-800 mb-3">
               Advanced Testing Kit
             </h3>
-            <div className="grid grid-cols-3 gap-4 text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div className="flex items-center gap-2 bg-white/50 p-2 rounded-lg hover:bg-white/60 transition-colors">
                 <div className="bg-orange-500/10 p-1 rounded-full">
                   <Check size={16} className="text-orange-500" />
