@@ -23,23 +23,6 @@ const HeroSection = () => (
     <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 to-white opacity-70" />
     <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5" />
 
-    {/* Animated Oil Drops */}
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(5)].map((_, i) => (
-        <div
-          key={i}
-          className="absolute animate-float"
-          style={{
-            left: `${Math.random() * 100}%`,
-            animationDelay: `${i * 0.5}s`,
-            opacity: 0.2,
-          }}
-        >
-          <Droplets size={48} className="text-orange-500" />
-        </div>
-      ))}
-    </div>
-
     {/* Hero Content */}
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -76,11 +59,11 @@ const HeroSection = () => (
         </div>
 
         {/* Right Column - Kit Image */}
-        <div className="relative lg:h-[600px] animate-fade-in-delayed">
+        <div className="relative animate-fade-in-delayed">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-100/10 to-transparent rounded-3xl" />
           <div className="relative h-full w-full rounded-3xl overflow-hidden shadow-2xl">
             <img
-              src="/api/placeholder/600/800"
+              src="oilMach.jpeg"
               alt="SpectrumPure Testing Kit"
               className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
             />
@@ -389,7 +372,7 @@ const SpectrupureLanding = () => {
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 p-1">
                   <div className="h-full w-full rounded-2xl bg-white p-8">
                     <img
-                      src="/api/placeholder/600/600"
+                      src="oilGraph.jpeg"
                       alt="Spectral Analysis Visualization"
                       className="w-full h-full object-cover rounded-xl"
                     />
