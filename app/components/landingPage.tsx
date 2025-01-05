@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useRef } from "react";
 import {
@@ -15,8 +15,6 @@ import {
   BookOpen,
 } from "lucide-react";
 
-
-
 const HeroSection = () => (
   <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
     {/* Background Gradients */}
@@ -30,19 +28,20 @@ const HeroSection = () => (
         <div className="text-left space-y-8">
           {/* Logo/Icon */}
           <div className="flex mb-8 animate-fade-in">
-            <Droplets size={72} className="text-orange-500" />
+            <SpectrumLogo />
           </div>
-          
+
           {/* Headline */}
           <div>
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-700 animate-fade-in">
               SpectrumPure
             </h1>
             <p className="text-2xl lg:text-3xl font-light mb-6 text-gray-800 animate-fade-in-delayed">
-              Revolutionizing Food Safety with Precision
+              Revolutionizing Food Safety with Precision using AI
             </p>
             <p className="text-lg text-gray-600 max-w-xl animate-fade-in-delayed-2">
-              Pioneering non-destructive spectral analysis for ensuring product purity and quality in the food industry
+              Pioneering non-destructive spectral analysis for ensuring OIL 
+              purity and quality to Determine Adulteration
             </p>
           </div>
 
@@ -59,30 +58,37 @@ const HeroSection = () => (
         </div>
 
         {/* Right Column - Kit Image */}
-        <div className="relative animate-fade-in-delayed">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-100/10 to-transparent rounded-3xl" />
-          <div className="relative h-full w-full rounded-3xl overflow-hidden shadow-2xl">
-            <img
-              src="oilMach.jpeg"
-              alt="SpectrumPure Testing Kit"
-              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-            />
-            {/* Floating Specs */}
-            <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Advanced Testing Kit</h3>
-              <div className="grid grid-cols-3 gap-4 text-sm text-gray-600">
-                <div className="flex items-center gap-2">
+        <div className="relative animate-fade-in-delayed rounded-3xl overflow-hidden shadow-2xl h-96 lg:h-[32rem] group">
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-100/10 to-transparent z-10" />
+          <img
+            src="oilMach.jpeg"
+            alt="SpectrumPure Testing Kit"
+            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+          />
+
+          {/* Floating Specs */}
+          <div className="absolute bottom-8 left-8 right-8 bg-white/30 backdrop-blur-md p-6 rounded-xl border border-white/40 shadow-lg z-20">
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">
+              Advanced Testing Kit
+            </h3>
+            <div className="grid grid-cols-3 gap-4 text-sm">
+              <div className="flex items-center gap-2 bg-white/50 p-2 rounded-lg hover:bg-white/60 transition-colors">
+                <div className="bg-orange-500/10 p-1 rounded-full">
                   <Check size={16} className="text-orange-500" />
-                  <span>EM Sensor</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <span className="text-gray-700 font-medium">EM Sensor</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/50 p-2 rounded-lg hover:bg-white/60 transition-colors">
+                <div className="bg-orange-500/10 p-1 rounded-full">
                   <Check size={16} className="text-orange-500" />
-                  <span>AI Module</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <span className="text-gray-700 font-medium">AI Module</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/50 p-2 rounded-lg hover:bg-white/60 transition-colors">
+                <div className="bg-orange-500/10 p-1 rounded-full">
                   <Check size={16} className="text-orange-500" />
-                  <span>Analytics</span>
                 </div>
+                <span className="text-gray-700 font-medium">Analytics</span>
               </div>
             </div>
           </div>
@@ -96,8 +102,13 @@ const HeroSection = () => (
             <div className="bg-orange-50 p-4 rounded-full group-hover:bg-orange-100 transition-colors duration-300">
               <Shield className="text-orange-500 w-8 h-8" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">Unmatched Accuracy</h3>
-            <p className="text-gray-600">Advanced EM sensor technology delivers precise detection of adulterants in:</p>
+            <h3 className="text-xl font-semibold text-gray-800">
+              Unmatched Accuracy
+            </h3>
+            <p className="text-gray-600">
+              Advanced EM sensor technology delivers precise detection of
+              adulterants in:
+            </p>
             <ul className="text-gray-600 space-y-2">
               <li className="flex items-center justify-center gap-2">
                 <Check size={16} className="text-orange-500" />
@@ -120,8 +131,12 @@ const HeroSection = () => (
             <div className="bg-orange-50 p-4 rounded-full group-hover:bg-orange-100 transition-colors duration-300">
               <Activity className="text-orange-500 w-8 h-8" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">AI Integration</h3>
-            <p className="text-gray-600">Smart analysis powered by machine learning provides:</p>
+            <h3 className="text-xl font-semibold text-gray-800">
+              AI Integration
+            </h3>
+            <p className="text-gray-600">
+              Smart analysis powered by machine learning provides:
+            </p>
             <ul className="text-gray-600 space-y-2">
               <li className="flex items-center justify-center gap-2">
                 <Check size={16} className="text-orange-500" />
@@ -144,8 +159,12 @@ const HeroSection = () => (
             <div className="bg-orange-50 p-4 rounded-full group-hover:bg-orange-100 transition-colors duration-300">
               <Database className="text-orange-500 w-8 h-8" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">Industry Standard</h3>
-            <p className="text-gray-600">Comprehensive solution designed for:</p>
+            <h3 className="text-xl font-semibold text-gray-800">
+              Industry Standard
+            </h3>
+            <p className="text-gray-600">
+              Comprehensive solution designed for:
+            </p>
             <ul className="text-gray-600 space-y-2">
               <li className="flex items-center justify-center gap-2">
                 <Check size={16} className="text-orange-500" />
@@ -167,26 +186,34 @@ const HeroSection = () => (
   </header>
 );
 
-
-{/* New CTA Section */}
+{
+  /* New CTA Section */
+}
 const CTASection = () => (
   <section className="py-24 bg-gradient-to-r from-orange-50 to-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="grid md:grid-cols-2 items-center">
           <div className="p-12 space-y-6">
-            <h2 className="text-4xl font-bold text-gray-800">Ready to Ensure Product Quality?</h2>
+            <h2 className="text-4xl font-bold text-gray-800">
+              Ready to Ensure Product Quality?
+            </h2>
             <p className="text-lg text-gray-600">
-              Get started with our comprehensive testing kit and join leading manufacturers in ensuring product authenticity.
+              Get started with our comprehensive testing kit and join leading
+              manufacturers in ensuring product authenticity.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Check className="text-orange-500" size={24} />
-                <span className="text-gray-700">Complete testing equipment</span>
+                <span className="text-gray-700">
+                  Complete testing equipment
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <Check className="text-orange-500" size={24} />
-                <span className="text-gray-700">Training and support included</span>
+                <span className="text-gray-700">
+                  Training and support included
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <Check className="text-orange-500" size={24} />
@@ -201,10 +228,12 @@ const CTASection = () => (
           <div className="relative h-full min-h-[400px] bg-gradient-to-br from-orange-400 to-orange-600 p-12 flex items-center justify-center">
             <div className="absolute inset-0 opacity-10 bg-[url('/api/placeholder/600/400')] bg-cover bg-center" />
             <div className="relative text-white text-center space-y-4">
-              <h3 className="text-3xl font-bold">Premium Testing Kit</h3>
-              <p className="text-lg opacity-90">Comprehensive solution for quality assurance</p>
+              <h3 className="text-3xl font-bold">Own Testing Kit</h3>
+              <p className="text-lg opacity-90">
+                Comprehensive solution for quality assurance
+              </p>
               <div className="inline-block border-2 border-white rounded-lg px-6 py-3 mt-4">
-                Starting from $999
+                Pricing
               </div>
             </div>
           </div>
@@ -214,8 +243,7 @@ const CTASection = () => (
   </section>
 );
 
-
-const ScrollReveal = ({ children, delay = 0 } : any) => {
+const ScrollReveal = ({ children, delay = 0 }: any) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -253,48 +281,46 @@ const ScrollReveal = ({ children, delay = 0 } : any) => {
   );
 };
 
-const SpectrumLogo = () => <img src="oilogo.png" alt="Spectrum Logo"></img>;
+const SpectrumLogo = () => (
+  <img 
+      src="logoSpec.png" 
+      alt="Spectrum Logo" 
+      style={{ width: '150px', height: '150px' }}
+  />
+);
+
 
 const researchTeam = [
   {
     name: "Dr. Shaik Kareem",
     role: "Founder",
     expertise: "Electromagnetic Radiation",
-    description:
-      "The professor, with expertise in physics, contributed his unique knowledge in electromagnetic radiation to the startup. Their understanding drives innovative detection techniques for impurities in edible oils. They are driven by bridging academia and industry, aiming to apply research to solve real-world issues.",
   },
   {
     name: "Mohd. Muzammil",
     role: "Co-founder",
     expertise: "AI and Data Science",
-    description:
-      "A final year student in B.E. (AI & DS), offered cutting-edge skills in AI and data science. They refine detection algorithms crucial for identifying impurities in edible oils. Passionate about practical applications, they see the startup as a chance to contribute to solving pressing societal issues.",
   },
   {
     name: "Prof. Gansham ",
     role: "Mentor and Guide",
     expertise: "Academia and Research",
-    description:
-      "With extensive experience in academia and research, the university professor supports the startup's growth. Their mentorship and connections provide crucial backing. They are passionate about fostering innovation and entrepreneurship, viewing the startup as a means to empower the next generation of innovators.",
   },
   {
-    name: "Mohd. Muzammil",
-    role: "Founder",
+    name: "Mohd. Mudassir",
+    role: "Co-Founder",
     expertise: "Electromagnetic Radiation",
-    description:
-      "The professor, with expertise in physics, contributed his unique knowledge in electromagnetic radiation to the startup. Their understanding drives innovative detection techniques for impurities in edible oils. They are driven by bridging academia and industry, aiming to apply research to solve real-world issues.",
   },
 ];
 
 const SpectrupureLanding = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="fixed m-2 w-40 h-40 z-50">
+      {/* <div className="fixed m-2 w-40 h-40 z-50">
         <SpectrumLogo />
-      </div>
+      </div> */}
       {/* Hero Section */}
       <HeroSection />
-      
 
       {/* Process Section */}
       <section className="py-32 bg-gradient-to-b from-white to-orange-50">
@@ -305,7 +331,8 @@ const SpectrupureLanding = () => {
                 Our Process
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                State-of-the-art spectral analysis for precise oil authentication
+                State-of-the-art spectral analysis for precise oil
+                authentication
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -313,12 +340,14 @@ const SpectrupureLanding = () => {
                 {
                   icon: <FlaskConical className="text-orange-500" size={40} />,
                   title: "Sample Collection",
-                  description: "Advanced hyperspectral imaging captures detailed chemical signatures",
+                  description:
+                    "Advanced hyperspectral imaging captures detailed chemical signatures",
                 },
                 {
                   icon: <LineChart className="text-orange-500" size={40} />,
                   title: "Spectral Analysis",
-                  description: "Multi-wavelength analysis across 400-1000nm spectrum",
+                  description:
+                    "Multi-wavelength analysis across 400-1000nm spectrum",
                 },
                 {
                   icon: <Shield className="text-orange-500" size={40} />,
@@ -352,7 +381,9 @@ const SpectrupureLanding = () => {
                   Advanced Spectral Analysis
                 </h2>
                 <p className="text-gray-600 text-lg mb-8">
-                  Our system utilizes cutting-edge hyperspectral imaging technology to analyze oil samples across multiple wavelengths, creating detailed chemical fingerprints for authentication.
+                  Our system utilizes hyperspectral imaging
+                  technology to analyze oil samples across multiple wavelengths,
+                  creating detailed chemical fingerprints for authentication.
                 </p>
                 <div className="space-y-4">
                   {[
@@ -384,75 +415,14 @@ const SpectrupureLanding = () => {
         </div>
       </section>
 
-      {/* Research Section */}
-      <section className="py-32 bg-gradient-to-b from-orange-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6 text-gray-800">Research & Innovation</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Pushing the boundaries of spectral analysis technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
-                <h3 className="font-display text-xl font-semibold mb-4 text-orange-500">
-                  Scientific Publications
-                </h3>
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-800">Advanced Spectral Analysis in Food Safety</h4>
-                    <p className="text-gray-600">Journal of Food Science, 2024</p>
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-800">Machine Learning in Oil Authentication</h4>
-                    <p className="text-gray-600">IEEE Transactions on Food Safety, 2024</p>
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-800">Hyperspectral Imaging Applications</h4>
-                    <p className="text-gray-600">Food Chemistry, 2023</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
-                <h3 className="font-display text-xl font-semibold mb-4 text-orange-500">
-                  Research Highlights
-                </h3>
-                <ul className="space-y-4">
-                  <li className="flex gap-3">
-                    <Check className="text-orange-500 flex-shrink-0 mt-1" />
-                    <div>
-                      <span className="font-semibold text-gray-800">Novel Algorithm Development</span>
-                      <p className="text-gray-600">Advanced machine learning models for spectral data analysis</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="text-orange-500 flex-shrink-0 mt-1" />
-                    <div>
-                      <span className="font-semibold text-gray-800">Database Enhancement</span>
-                      <p className="text-gray-600">Extensive spectral database of pure and adulterated oils</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <Check className="text-orange-500 flex-shrink-0 mt-1" />
-                    <div>
-                      <span className="font-semibold text-gray-800">Hardware Optimization</span>
-                      <p className="text-gray-600">Improved hyperspectral imaging system design</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* Applications Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6 text-gray-800">Industry Applications</h2>
+              <h2 className="text-4xl font-bold mb-6 text-gray-800">
+                Industry Applications
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Transforming quality control across the food industry
               </p>
@@ -462,7 +432,8 @@ const SpectrupureLanding = () => {
                 {
                   icon: <FlaskConical className="text-orange-500" size={40} />,
                   title: "Food Manufacturing",
-                  description: "Quality control and authentication in large-scale production",
+                  description:
+                    "Quality control and authentication in large-scale production",
                 },
                 {
                   icon: <Shield className="text-orange-500" size={40} />,
@@ -479,7 +450,7 @@ const SpectrupureLanding = () => {
                   title: "Quality Testing Labs",
                   description: "Rapid and accurate sample analysis",
                 },
-                
+
                 {
                   icon: <LineChart className="text-orange-500" size={40} />,
                   title: "Supply Chain",
@@ -514,9 +485,12 @@ const SpectrupureLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6 text-gray-800">Research Team</h2>
+              <h2 className="text-4xl font-bold mb-6 text-gray-800">
+                Research Team
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Led by world-class experts in spectral analysis and machine learning
+                Led by world-class experts in spectral analysis and machine
+                learning
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -544,8 +518,6 @@ const SpectrupureLanding = () => {
           </ScrollReveal>
         </div>
       </section>
-
-      
 
       {/* Footer */}
       <footer className="py-8 bg-white border-t border-orange-100">
