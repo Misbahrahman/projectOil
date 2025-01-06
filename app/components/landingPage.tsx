@@ -301,16 +301,6 @@ const researchTeam = [
     role: "Co-founder",
     expertise: "AI and Data Science",
   },
-  {
-    name: "Prof. Gansham ",
-    role: "Mentor and Guide",
-    expertise: "Academia and Research",
-  },
-  {
-    name: "Mohd. Mudassir",
-    role: "Co-Founder",
-    expertise: "Electromagnetic Radiation",
-  },
 ];
 
 const SpectrupureLanding = () => {
@@ -493,7 +483,7 @@ const SpectrupureLanding = () => {
                 learning
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {researchTeam.map((member, index) => (
                 <ScrollReveal key={index} delay={index * 200}>
                   <div className="bg-white p-8 rounded-2xl shadow-lg border border-orange-100 hover:border-orange-300 transition-all duration-300 hover:transform hover:scale-105">
@@ -528,7 +518,7 @@ const SpectrupureLanding = () => {
               className="text-orange-500 mx-auto mb-4 hover:scale-110 transition-transform duration-300"
             />
             <p className="hover:text-orange-500 transition-colors duration-300">
-              © 2025 Spectrupure. All rights reserved.
+              © 2025 Spectrumpure. All rights reserved.
             </p>
           </div>
         </div>
